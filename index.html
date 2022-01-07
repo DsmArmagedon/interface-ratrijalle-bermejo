@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Datos</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="p-2 bd-highlight text-center">
+                <h3>RASTRIJALLE BERMEJO</h2>
+                    <h5>02 DE AGOSTO</h4>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="images/img.png" class="img">
+        </div>
+        <hr>
+        <div class="row justify-content-md-center">
+            <h4 class="backg-size orange font-weight-bold">Personas Registradas</h4>
+            <div class="w-100"></div>
+            <p class="font-weight-bold h2" id="people-registers">0</p>
+        </div>
+        <div class="row justify-content-md-center">
+            <table class="people-registers">
+                <tr>
+                    <td rowspan="2" class="text-center">
+                        <h2 class="title-risk backg-size red font-weight-bold" style="height: 200px;">Riesgos</h2>
+                    </td>
+                    <td class="text-center ">
+                        <h4 class="title-risk backg-size-sm gray font-weight-bold">Sin Riesgo</h4>
+                        <input type="number" class="form-control form-control-lg" id="less-risk">
+                    </td>
+                    <td class="text-center">
+                        <h4 class="title-risk backg-size-sm green font-weight-bold">Bajo Riesgo</h4>
+                        <input type="number" class="form-control form-control-lg" id="low-risk">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <h4 class="title-risk backg-size-sm yellow font-weight-bold">Riesgo Medio</h4>
+                        <input type="number" class="form-control form-control-lg" id="medium-risk">
+                    </td>
+                    <td class="text-center">
+                        <h4 class="title-risk backg-size-sm red font-weight-bold">Alto Riesgo</h4>
+                        <input type="number" class="form-control form-control-lg" id="higth-risk">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 pr-4">
+                <div class="row">
+                    <div class="col-6 col-md-9">
+                        <h4 class="backg-size-textr orange font-weight-bold text-center">Personas con<br>
+                            Enfermedades de Base</h4>
+                    </div>
+                    <div class="col-6 col-md-3 my-auto">
+                        <p class="font-weight-bold h1" id="people-diseases">0</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-md-12">
+                        <table class="table-forms">
+                            <thead>
+                                <tr class="text-center">
+                                    <th class="w-80">
+                                        Enfermedad
+                                    </th>
+                                    <th class="w-20 column-text-rigth">
+                                        Cantidad
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Cancer
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm disease"
+                                            id="disease-cancer">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Diabético
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm disease"
+                                            id="disease-diabetico">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Discapacidad grave
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm disease"
+                                            id="disease-discapacidad">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Enfermedad del corazón
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm disease"
+                                            id="disease-corazon">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Enfermedades del riñón
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm disease"
+                                            id="disease-rinon">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Enfermedad Respiratoria
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm disease"
+                                            id="disease-respiratoria">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Presión arterial alta
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm disease"
+                                            id="disease-presion">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Sobre Peso
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm disease"
+                                            id="disease-peso">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 pl-4">
+                <div class="row">
+                    <div class="col-6 col-md-9">
+                        <h4 class="backg-size-textr orange font-weight-bold text-center">Mujeres<br>Embarazadas</h4>
+                    </div>
+                    <div class="col-6 col-md-3 my-auto">
+                        <input class="form-control form-control-lg" type="number">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-md-9">
+                        <h4 class="backg-size-textr orange font-weight-bold text-center">Viajes en los
+                            últimos <br>
+                            15 días</h4>
+                    </div>
+                    <div class="col-6 col-md-3 my-auto">
+                        <p class="font-weight-bold h1" id="people-travels">0</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-md-12">
+                        <table class="table-forms">
+                            <thead>
+                                <tr class="text-center">
+                                    <th class="w-80">
+                                        Destino
+                                    </th>
+                                    <th class="w-20 column-text-rigth">
+                                        Cantidad
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        BERMEJO
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm travel"
+                                            id="travel-bermejo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        TARIJA
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm travel"
+                                            id="travel-tarija">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        YACUIBA
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm travel"
+                                            id="travel-yacuiba">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row justify-content-md-center">
+            <h4 class="backg-size orange font-weight-bold">Personas Diagnosticadas</h4>
+            <div class="w-100"></div>
+            <p class="font-weight-bold h2" id="people-diagnosed">0</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <h4 class="backg-size-sm yellow font-weight-bold">No Reactivos</h4>
+                <input type="number" class="form-control  form-control-lg" id="non-reactive">
+            </div>
+            <div class="col-md-4 text-center">
+                <h4 class="backg-size-sm red font-weight-bold">Reactivos</h4>
+                <input type="number" class="form-control  form-control-lg" id="reactive">
+                <div class="w-100 mt-5"></div>
+                <div class="row">
+                    <div class="col-4 col-md-8">
+                        <h4 class="backg-size-textr-sm red font-weight-bold">lgM+</h4>
+                    </div>
+                    <div class="col-4 col-md-4">
+                        <input type="number" class="form-control  form-control-lg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 col-md-8">
+                        <h4 class="backg-size-textr-sm red font-weight-bold">lgG+</h4>
+                    </div>
+                    <div class="col-4 col-md-4">
+                        <input type="number" class="form-control  form-control-lg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 col-md-8">
+                        <h4 class="backg-size-textr-sm red font-weight-bold">lgM+ lgG+</h4>
+                    </div>
+                    <div class="col-4 col-md-4">
+                        <input type="number" class="form-control form-control-lg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center" style="border-left: 1px solid black;">
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                        <h4 class="backg-size-lg blue font-weight-bold">Hombres</h4>
+                        <input type="number" class="form-control form-control-lg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                        <h4 class="backg-size-lg purple font-weight-bold">Mujeres</h4>
+                        <input type="number" class="form-control form-control-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-3 offset-md-2 text-center">
+                <h4 class="backg-size-sm green font-weight-bold mb-2">No Reactivos</h4>
+                <table class="table-forms">
+                    <tbody>
+                        <tr>
+                            <td class="w-75">
+                                Alto Riesgo
+                            </td>
+                            <td>
+                                <input type="number" class="form-control form-control-sm">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-75">
+                                Medio Riesgo
+                            </td>
+                            <td>
+                                <input type="number" class="form-control form-control-sm">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-75">
+                                Bajo Riesgo
+                            </td>
+                            <td>
+                                <input type="number" class="form-control form-control-sm">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-3 offset-md-3 text-center">
+                <h4 class="backg-size-sm green font-weight-bold mb-2">Seguro</h4>
+                <table class="table-forms">
+                    <tbody>
+                        <tr>
+                            <td class="w-75">
+                                Ninguno
+                            </td>
+                            <td>
+                                <input type="number" class="form-control form-control-sm">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-75">
+                                Sus
+                            </td>
+                            <td>
+                                <input type="number" class="form-control form-control-sm">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3 offset-md-2 text-center">
+                <h4 class="backg-size-sm green font-weight-bold mb-2">Viajes</h4>
+                <table class="table-forms">
+                    <tbody>
+                        <tr>
+                            <td class="w-75">
+                                Ninguno
+                            </td>
+                            <td>
+                                <input type="number" class="form-control form-control-sm">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-3 offset-md-3 text-center">
+                <h4 class="backg-size-sm green font-weight-bold mb-2">Tipo Riesgo</h4>
+                <table class="table-forms">
+                    <tbody>
+                        <tr>
+                            <td class="w-75">
+                                Enf. Respiratoria
+                            </td>
+                            <td>
+                                <input type="number" class="form-control form-control-sm">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <div class="row justify-content-md-center">
+            <h4 class="backg-size orange font-weight-bold">Ocupación</h4>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <div class="row text-center">
+                    <div class="col-6 col-md-6">
+                        <h4 class="backg-size-sm ligth-blue font-weight-bold">Cuenta Propia</h4>
+                        <input type="number" class="form-control form-control-lg">
+                    </div>
+                    <div class="col-6 col-md-6">
+                        <h4 class="backg-size-sm ligth-blue font-weight-bold">Desempleo</h4>
+                        <input type="number" class="form-control form-control-lg">
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-6 col-md-6">
+                        <h4 class="backg-size-sm ligth-blue font-weight-bold">Público</h4>
+                        <input type="number" class="form-control form-control-lg">
+                    </div>
+                    <div class="col-6 col-md-6">
+                        <h4 class="backg-size-sm ligth-blue font-weight-bold">Privado</h4>
+                        <input type="number" class="form-control form-control-lg">
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-6 col-md-6 offset-md-3">
+                        <h4 class="backg-size-sm ligth-blue font-weight-bold">Estudiante</h4>
+                        <input type="number" class="form-control form-control-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row justify-content-md-center">
+            <h4 class="backg-size orange font-weight-bold">Mercado</h4>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <div class="row text-center">
+                    <div class="col-6 col-md-6">
+                        <h4 class="backg-size-sm ligth-blue font-weight-bold">Moto Méndez</h4>
+                        <input type="number" class="form-control form-control-lg">
+                    </div>
+                    <div class="col-6 col-md-6">
+                        <h4 class="backg-size-sm ligth-blue font-weight-bold">Bolívar</h4>
+                        <input type="number" class="form-control form-control-lg">
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-6 col-md-6">
+                        <h4 class="backg-size-sm ligth-blue font-weight-bold">Campesino</h4>
+                        <input type="number" class="form-control form-control-lg">
+                    </div>
+                    <div class="col-6 col-md-6">
+                        <h4 class="backg-size-sm ligth-blue font-weight-bold">Otras Tiendas</h4>
+                        <input type="number" class="form-control form-control-lg">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row justify-content-md-center">
+            <h4 class="backg-size red font-weight-bold">Problemas de aislamiento es caso de contraer Covid</h4>
+            <div id="problem-covid" style="width:100%; height:300px;"></div>
+        </div>
+
+        <hr>
+        <div class="row justify-content-md-center">
+            <h4 class="backg-size green font-weight-bold">Automedicación para el Covid</h4>
+            <div id="self-medication-covid" style="width:100%; height:300px;"></div>
+        </div>
+
+        <hr>
+        <div class="row justify-content-md-center">
+            <h4 class="backg-size orange font-weight-bold">Uso de transporte Público</h4>
+            <div id="use-transport-public" style="width:100%; height:300px;"></div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="js/pages.js"></script>
+</body>
+
+</html>
